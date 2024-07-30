@@ -1,15 +1,31 @@
-/* display background color black on navbar scroll */
-.navbarScroll.navbarDark {
-    background-color: black;
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* hero background image */
-.bgimage {
-    height:100vh;
-    background: url('../images/heroImage.jpeg');
-    background-size:cover;
-    position:relative;
+/* HTML and body settings */
+html, body {
+    height: 100%;
+    overflow: hidden; /* Hide default scrollbars */
+    font-family: Arial, sans-serif; /* Set a default font family */
 }
+
+
+/* Navbar styling */
+.navbarScroll.navbarDark {
+    background-color: black; /* Background color black on navbar scroll */
+}
+
+/* Hero background image */
+.bgimage {
+    height: 100vh;
+    background: url('../images/heroImage.jpg');
+    background-size: cover;
+    position: relative;
+}
+
 /* text css above hero image*/
 .hero_title {
     font-size: 4.5rem;
@@ -25,17 +41,16 @@
     transform: translate(-50%, -50%);
     color: white;
 }
-
-/* about section image css */
+/* About section image CSS */
 .imageAboutPage {
     width: 100%;
 }
 
-/* services section css */
+/* Services section CSS */
 .servicesText.card {
     height: 280px;
     cursor: pointer;
-  }
+}
 .servicesIcon {
     font-size: 36px;
     text-align: center;
@@ -51,28 +66,59 @@
     border: 1px solid #008000;
 }
 
-/* social media icons styling */
+/* Social media icons styling */
 .social-icons {
     font-size: 36px;
     cursor: pointer;
 }
-.fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
-    color: #008000;
+.social-icons a {
+    color: #000; /* Default color black */
+    margin: 0 10px;
+    text-decoration: none;
+}
+.social-icons a:hover {
+    color: #25D366; /* Green color on hover */
+}
+.fa-facebook:hover, .fa-instagram:hover, .fa-twitter:hover, .fa-linkedin:hover, .fa-twitch:hover {
+    color: #25D366; /* Green color on hover */
 }
 .fab {
-    color: #000000;
+    color: #000000; /* Default color black */
 }
-/* footer styling */
+.fa-lg {
+    font-size: 1.2em; /* Slightly smaller than default size */
+}
+
+.social-icons a .fa-whatsapp:hover {
+    color: #25D366; /* Specific green color for WhatsApp icon */
+  }
+
+/* Footer styling */
 #footer {
     background-color: #808080;
     text-align: center;
 }
 
-/* spacing on all sections */
+/* Spacing on all sections */
 #about, #services, #portfolio, #contact {
     margin-top: 4rem;
     padding-top: 4rem;
 }
 #contact {
     padding-bottom: 4rem;
+}
+
+/* General solution for hiding scrollbars */
+.no-scrollbar {
+    overflow: scroll; /* Ensure content is scrollable */
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+.no-scrollbar::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+/* Hide scrollbar for Firefox */
+.no-scrollbar {
+    scrollbar-width: none; /* Hide scrollbar */
 }
