@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-d9zj04ktmlq5QyRQpcF90b2RRqKj4bJHZqof1FOuU8iCUbQ1BB/qIFN88J1pGSH66lz3mcYrDQcHZtjFJSocbg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var hour = new Date().getHours();
+            var greeting = hour < 12 ? "Good Morning" : (hour < 18 ? "Good Afternoon" : "Good Evening");
+            document.getElementById('greeting').textContent = greeting + ', Welcome to My Website!';
+        });
+    </script>
+
+    <script>
+        window.__lc = window.__lc || {};
+        window.__lc.license = 12345678;
+        (function() {
+            var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+            lc.src = 'https://cdn.livechatinc.com/tracking.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+        })();
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Your navigation items here -->
+    </nav>
+
+    <header>
+        <h1 id="greeting"></h1>
+    </header>
+
+    <main>
+        <!-- Your main content here -->
+        <iframe height="300" style="width: 100%;" scrolling="no" title="Live Code Example" src="https://codepen.io/yourpen/embed/preview" frameborder="no" allowfullscreen></iframe>
+    </main>
+
+    <footer>
+        <!-- Your footer content here -->
+    </footer>
+</body>
+</html>
