@@ -8,6 +8,8 @@
 /* HTML and body settings */
 html, body {
     height: 100%;
+    margin: 0;
+    padding-bottom: 40px;
     overflow: hidden; /* Hide default scrollbars */
     font-family: Arial, sans-serif; /* Set a default font family */
 }
@@ -160,15 +162,17 @@ html, body {
     left: 0;
     width: 100%; /* Make the footer full width */
     height: 40px;
-    background-color: rgba(0, 0, 0, 0.4); /* Dark transparent background */
+    background-color: rgba(0, 0, 0, 0.6); /* Darker transparent background */
     color: #fff; /* Text color */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for better visibility */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slightly more pronounced shadow */
     border-top: 1px solid #ddd;
     display: flex; /* Use Flexbox for centering text */
     justify-content: center; /* Center text horizontally */
     align-items: center; /* Center text vertically */
     text-align: center; /* Ensure text is centered within the footer */
+    z-index: 1;
 }
+
 
 
 /* Social media icons styling */
