@@ -1079,72 +1079,72 @@
                     <h3 class="text-2xl font-semibold text-white mb-6">Send Me a Message</h3>
                     
                     <form 
-    id="contactForm" 
-    action="https://formspree.io/f/xzzrlrnq" 
-    method="POST"
-    class="space-y-6"
->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="relative">
-            <input 
-                type="text" 
-                id="name" 
-                name="name"
-                class="floating-input input-field w-full bg-dark-700 border border-dark-600 text-white rounded-lg py-3 px-4 focus:outline-none peer" 
-                placeholder=" "
-                required
-            >
-            <label for="name" class="floating-label absolute left-4 top-3 text-gray-400 pointer-events-none">Your Name</label>
-        </div>
-        
-        <div class="relative">
-            <input 
-                type="email" 
-                id="email" 
-                name="email"
-                class="floating-input input-field w-full bg-dark-700 border border-dark-600 text-white rounded-lg py-3 px-4 focus:outline-none peer" 
-                placeholder=" "
-                required
-            >
-            <label for="email" class="floating-label absolute left-4 top-3 text-gray-400 pointer-events-none">Your Email</label>
-        </div>
-    </div>
-    
-    <div class="relative">
-        <input 
-            type="text" 
-            id="subject" 
-            name="subject"
-            class="floating-input input-field w-full bg-dark-700 border border-dark-600 text-white rounded-lg py-3 px-4 focus:outline-none peer" 
-            placeholder=" "
-            required
-        >
-        <label for="subject" class="floating-label absolute left-4 top-3 text-gray-400 pointer-events-none">Subject</label>
-    </div>
-    
-    <div class="relative">
-        <textarea 
-            id="message" 
-            name="message"
-            rows="5"
-            class="floating-input input-field w-full bg-dark-700 border border-dark-600 text-white rounded-lg py-3 px-4 focus:outline-none peer" 
-            placeholder=" "
-            required
-        ></textarea>
-        <label for="message" class="floating-label absolute left-4 top-3 text-gray-400 pointer-events-none">Your Message</label>
-    </div>
-    
-    <!-- Add hidden _replyto field for better email handling -->
-    <input type="hidden" name="_replyto" id="email_hidden">
-    
-    <!-- Formspree redirect confirmation page -->
-    <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
-    
-    <button type="submit" class="w-full py-3 px-4 bg-gradient-to-r from-neon-blue to-neon-green text-dark-900 font-semibold rounded-lg hover:opacity-90 transition-opacity">
-        Send Message
-        <i class="fas fa-paper-plane ml-2"></i>
-    </button>
-</form>
+                        id="contactForm" 
+                        action="https://formspree.io/f/xzzrlrnq" 
+                        method="POST"
+                        class="space-y-6"
+                        >                   
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="relative">
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name"
+                                    class="floating-input input-field w-full bg-dark-700 border border-dark-600 text-white rounded-lg py-3 px-4 focus:outline-none peer" 
+                                    placeholder=" "
+                                    required
+                                >
+                                <label for="name" class="floating-label absolute left-4 top-3 text-gray-400 pointer-events-none">Your Name</label>
+                            </div>
+
+                            <div class="relative">
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email"
+                                    class="floating-input input-field w-full bg-dark-700 border border-dark-600 text-white rounded-lg py-3 px-4 focus:outline-none peer" 
+                                    placeholder=" "
+                                    required
+                                >
+                                <label for="email" class="floating-label absolute left-4 top-3 text-gray-400 pointer-events-none">Your Email</label>
+                            </div>
+                        </div>
+
+                        <div class="relative">
+                            <input 
+                                type="text" 
+                                id="subject" 
+                                name="subject"
+                                class="floating-input input-field w-full bg-dark-700 border border-dark-600 text-white rounded-lg py-3 px-4 focus:outline-none peer" 
+                                placeholder=" "
+                                required
+                            >
+                            <label for="subject" class="floating-label absolute left-4 top-3 text-gray-400 pointer-events-none">Subject</label>
+                        </div>
+
+                        <div class="relative">
+                            <textarea 
+                                id="message" 
+                                name="message"
+                                rows="5"
+                                class="floating-input input-field w-full bg-dark-700 border border-dark-600 text-white rounded-lg py-3 px-4 focus:outline-none peer" 
+                                placeholder=" "
+                                required
+                            ></textarea>
+                            <label for="message" class="floating-label absolute left-4 top-3 text-gray-400 pointer-events-none">Your Message</label>
+                        </div>
+
+                        <!-- Add hidden _replyto field for better email handling -->
+                        <input type="hidden" name="_replyto" id="email_hidden">
+
+                        <!-- Formspree redirect confirmation page -->
+                        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+
+                        <button type="submit" class="w-full py-3 px-4 bg-gradient-to-r from-neon-blue to-neon-green text-dark-900 font-semibold rounded-lg hover:opacity-90 transition-opacity">
+                            Send Message
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
                 </div>
                 
                 <!-- Contact Info -->
@@ -1254,7 +1254,6 @@
             const themeToggle = document.getElementById('themeToggle');
             const html = document.documentElement;
 
-            // Load saved theme
             const savedTheme = localStorage.getItem('theme') || 'dark';
             html.classList.add(savedTheme);
             themeToggle.innerHTML = savedTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
@@ -1307,7 +1306,7 @@
             portfolioFilters.forEach(filter => {
                 filter.addEventListener('click', function() {
                     const filterValue = this.dataset.filter;
-                    
+
                     portfolioFilters.forEach(f => f.classList.remove('bg-neon-blue', 'text-dark-900'));
                     this.classList.add('bg-neon-blue', 'text-dark-900');
 
@@ -1327,7 +1326,6 @@
             const loadingOverlay = document.getElementById('loadingOverlay');
             const successModal = document.createElement('div');
 
-            // Success Modal HTML
             successModal.innerHTML = `
                 <div id="successModal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 modal">
                     <div class="modal-content glass-card rounded-2xl p-8 max-w-md w-full">
@@ -1350,13 +1348,49 @@
                 e.preventDefault();
                 loadingOverlay.classList.remove('hidden');
 
-                // Simulate form submission
-                setTimeout(() => {
+                const formData = new FormData(contactForm);
+
+                try {
+                    const response = await fetch(contactForm.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    if (response.ok) {
+                        document.body.appendChild(successModal);
+                        successModal.querySelector('.modal').classList.add('active');
+                        contactForm.reset();
+                    } else {
+                        const errorData = await response.json();
+                        throw new Error(errorData.error || 'Form submission failed');
+                    }
+                } catch (error) {
+                    const errorModal = document.createElement('div');
+                    errorModal.innerHTML = `
+                        <div class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 modal">
+                            <div class="modal-content glass-card rounded-2xl p-8 max-w-md w-full">
+                                <div class="text-center">
+                                    <div class="w-16 h-16 bg-neon-red bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-times-circle text-3xl text-neon-red"></i>
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-white mb-4">Submission Error</h3>
+                                    <p class="text-gray-400 mb-6">${error.message}</p>
+                                    <button onclick="this.parentElement.parentElement.parentElement.remove()" 
+                                            class="px-6 py-2 bg-neon-blue text-dark-900 rounded-lg hover:opacity-90 transition-opacity">
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    document.body.appendChild(errorModal);
+                    errorModal.querySelector('.modal').classList.add('active');
+                } finally {
                     loadingOverlay.classList.add('hidden');
-                    document.body.appendChild(successModal);
-                    successModal.querySelector('.modal').classList.add('active');
-                    contactForm.reset();
-                }, 2000);
+                }
             });
 
             // Intersection Observer for fade-in animations
